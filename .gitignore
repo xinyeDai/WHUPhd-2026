@@ -1,0 +1,33 @@
+# LaTeX build products (the example PDF may be shared as a release asset).
+build/
+release/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.lof
+*.lot
+*.out
+*.toc
+*.xdv
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+*.run.xml
+*.bcf
+*-eps-converted-to.pdf
+
+# Local editor / OS files.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+__pycache__/
+.codex-review/
+.env
+.env.*

@@ -1,0 +1,17 @@
+\chapter{补充材料与跨页表格}\label{app:supplement}
+附录可放置不适合正文连续阅读的推导、参数清单或补充实验。跨页表格使用\texttt{longtable}，保留重复表头；不要把\texttt{longtable}嵌入\texttt{table}浮动环境。
+
+\begingroup\small
+\begin{longtable}{@{}p{0.16\textwidth}p{0.74\textwidth}@{}}
+  \caption{参数说明格式示例}\label{tab:parameters}\\
+  \toprule 参数 & 说明\\\midrule\endfirsthead
+  \multicolumn{2}{c}{表\thetable\ 参数说明（接上页）}\\
+  \toprule 参数 & 说明\\\midrule\endhead
+  \midrule\multicolumn{2}{r}{下页接续}\endfoot
+  \bottomrule\endlastfoot
+  $n$ & 观测数量，应依据真实样本定义。\\
+  $\mathbf{R}$ & 观测协方差矩阵，需说明单位和估计来源。\\
+  $\mathbf{J}$ & 残差对状态的雅可比矩阵。\\
+  $\mathbf{W}$ & 加权矩阵，需满足相应求解条件。\\
+\end{longtable}
+\endgroup

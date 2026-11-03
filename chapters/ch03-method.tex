@@ -1,0 +1,41 @@
+\chapter{研究方法与求解框架}\label{chap:method}
+\section{方法概述}
+图\ref{fig:workflow}使用TikZ生成矢量示意图，文字和连线在放大后仍保持清晰。正式科研图应使用真实输入及可追溯的绘图流程，避免将示意内容当作实验结果。
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    block/.style={draw,minimum width=28mm,minimum height=12mm,align=center},
+    >=Latex,node distance=9mm]
+    \node[block] (input) {输入观测};
+    \node[block,right=of input] (model) {模型构建};
+    \node[block,right=of model] (solve) {联合求解};
+    \node[block,right=of solve] (output) {结果评价};
+    \draw[->] (input)--(model);
+    \draw[->] (model)--(solve);
+    \draw[->] (solve)--(output);
+  \end{tikzpicture}
+  \caption{研究流程示意图}\label{fig:workflow}
+\end{figure}
+
+\section{目标函数与求解}
+根据式\eqref{eq:observation}构造残差后，可以写出一般加权最小二乘问题：
+\begin{equation}\label{eq:objective}
+  \hat{\mathbf{x}}
+  =\arg\min_{\mathbf{x}}\sum_{i=1}^{n}
+  \left\lVert\mathbf{z}_i-h_i(\mathbf{x})\right\rVert_{\mathbf{R}_i^{-1}}^2.
+\end{equation}
+该式用于演示数学排版。实际研究应进一步说明模型假设、状态参数化、求解步骤与适用边界。
+
+\subsection{多行公式}
+较长推导可使用\texttt{align}环境，在等号处对齐：
+\begin{align}
+  \mathbf{r}(\mathbf{x}+\Delta\mathbf{x})
+    &\approx\mathbf{r}(\mathbf{x})+\mathbf{J}\Delta\mathbf{x},\\
+  \mathbf{J}^{\mathsf T}\mathbf{W}\mathbf{J}\Delta\mathbf{x}
+    &=-\mathbf{J}^{\mathsf T}\mathbf{W}\mathbf{r}(\mathbf{x}).
+\end{align}
+其中，$\mathbf{J}$为残差对状态的雅可比矩阵。模板采用页尾自然留白，避免将页面剩余高度拉伸到公式前后。
+
+\section{本章小结}
+本章演示矢量流程图、单行公式、多行公式以及相应引用。正文、公式和图形保持各自的语义顺序，由排版系统协调页面空间。

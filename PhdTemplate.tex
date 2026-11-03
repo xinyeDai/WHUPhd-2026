@@ -1,0 +1,43 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% Options: review (anonymous copy), print (chapters on odd pages), portable (Fandol fonts).
+\documentclass{whuphd2026}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{mwe} % Provides example-image-a/b; no research figures are required.
+\input{thesis-info}
+
+\begin{document}
+\thesiscover
+\thesisenglishcover
+\ifthesisreview\else
+  \input{frontmatter/statements}
+\fi
+\input{frontmatter/innovations}
+\frontmatter
+\pagenumbering{Roman}
+\input{frontmatter/abstracts}
+\thesistoc
+% Optional: uncomment only if your department requires a notation list.
+% \input{frontmatter/notation}
+
+\mainmatter
+\thesisbodyfont
+\input{chapters/ch01-introduction}
+\input{chapters/ch02-foundations}
+\input{chapters/ch03-method}
+\input{chapters/ch04-experiments}
+\input{chapters/ch05-application}
+\input{chapters/ch06-extension}
+\input{chapters/ch07-conclusion}
+
+\bibliographystyle{gbt7714-author-year}
+\bibliography{references}
+\appendix
+\input{backmatter/appendix}
+\backmatter
+\input{backmatter/publications}
+\ifthesisreview\else
+  \input{backmatter/acknowledgements}
+\fi
+\end{document}

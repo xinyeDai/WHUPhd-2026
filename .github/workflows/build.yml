@@ -1,0 +1,25 @@
+name: Build example PDFs
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  xelatex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends latexmk texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-bibtex-extra fonts-texgyre
+      - name: Compile normal, review and portable versions
+        run: |
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error PhdTemplate.tex
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error ReviewTemplate.tex
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error PortableTemplate.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thesis-examples
+          path: build/*.pdf

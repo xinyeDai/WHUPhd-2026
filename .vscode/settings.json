@@ -1,0 +1,29 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-xelatex",
+      // Windows / Ubuntu / macOS: use latexmk from the current system PATH.
+      "command": "latexmk",
+      // If needed, comment out the line above and enable ONE local command:
+      // "command": "C:/texlive/2026/bin/windows/latexmk.exe",
+      // "command": "/usr/local/texlive/2026/bin/x86_64-linux/latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-outdir=%DIR%/build",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    { "name": "latexmk (XeLaTeX)", "tools": ["latexmk-xelatex"] }
+  ],
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoClean.run": "never",
+  "files.encoding": "utf8"
+}

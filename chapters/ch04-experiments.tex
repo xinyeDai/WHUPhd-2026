@@ -1,0 +1,41 @@
+\chapter{实验设计与结果分析}\label{chap:experiments}
+\section{实验设置}
+以下数值仅用于排版演示。实际实验应交代数据来源、评价参考、时间关联、坐标系、对齐方式和指标定义。
+
+\section{定位精度评价}
+表\ref{tab:accuracy}展示数值右对齐的三线表。RMSE/MAX与单位写入表头，位置误差保留三位小数以表示到毫米。
+
+\begin{table}[htbp]
+  \centering
+  \caption{位置误差统计格式示例}\label{tab:accuracy}
+  \begin{tabular}{@{}lrrr@{}}
+    \toprule
+    实验序列 & 里程（km） & 基线 RMSE/MAX（m） & 本文方法 RMSE/MAX（m）\\
+    \midrule
+    序列1 & 1.234 & 0.123/0.456 & 0.045/0.201\\
+    序列2 & 2.345 & 0.234/0.567 & 0.056/0.212\\
+    序列3 & 3.456 & 0.345/0.678 & 0.067/0.223\\
+    \bottomrule
+  \end{tabular}
+  \tablenote{注：所有数值均为排版演示数据，不对应真实实验。}
+\end{table}
+
+图\ref{fig:comparison}演示子图引用：图\ref{fig:comparison-overview}为整体视图，图\ref{fig:comparison-detail}为局部视图。占位图片来自\texttt{mwe}宏包，使用时替换图片路径。
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.47\textwidth}
+    \centering\includegraphics[width=0.8\linewidth]{example-image-a}
+    \caption{整体视图}\label{fig:comparison-overview}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.47\textwidth}
+    \centering\includegraphics[width=0.8\linewidth]{example-image-b}
+    \caption{局部视图}\label{fig:comparison-detail}
+  \end{subfigure}
+  \caption{组合图排版示例}\label{fig:comparison}
+\end{figure}
+
+解释结果时应结合总体指标与局部变化。图文可与相邻内容穿插，分析文字应引用图号，方便读者定位。
+
+\section{本章小结}
+表格与图片优先使用\texttt{[htbp]}，不为每张图设置强制浮动屏障。需要独立图页时应以可读性为依据，避免为压缩页数缩小图中的坐标轴和图例。

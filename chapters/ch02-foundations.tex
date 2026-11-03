@@ -1,0 +1,22 @@
+\chapter{理论基础与问题建模}\label{chap:foundations}
+\section{符号约定}
+本文档使用粗体小写字母表示向量，粗体大写字母表示矩阵。公式中的变量应在首次出现时说明其含义、维数与单位。独立符号说明表默认不加载，正文仍应提供必要定义。
+
+\begin{definition}[加权平方范数]
+对于向量$\mathbf{r}$及对称正定矩阵$\mathbf{W}$，定义
+\begin{equation}
+  \lVert\mathbf{r}\rVert_{\mathbf{W}}^2
+  = \mathbf{r}^{\mathsf T}\mathbf{W}\mathbf{r}.
+\end{equation}
+\end{definition}
+
+\section{观测模型}
+考虑一般非线性观测模型
+\begin{equation}\label{eq:observation}
+  \mathbf{z}=h(\mathbf{x})+\boldsymbol{\epsilon},
+  \qquad \boldsymbol{\epsilon}\sim\mathcal{N}(\mathbf{0},\mathbf{R}),
+\end{equation}
+其中，$\mathbf{x}$为待估状态，$\mathbf{z}$为观测量，$h(\cdot)$为观测函数，$\mathbf{R}$为观测噪声协方差矩阵。公式后如果继续同一段解释，不应在源码中插入空段落。
+
+\section{本章小结}
+本章通过通用模型演示符号定义、定理环境与公式编号。编号采用“章号-序号”，正文通过\verb|\label|与\verb|\ref|维护交叉引用。
