@@ -25,7 +25,7 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error PhdTem
 Ubuntu 可以安装：
 
 ```sh
-sudo apt install latexmk texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-bibtex-extra fonts-texgyre
+sudo apt install latexmk texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-bibtex-extra texlive-fonts-recommended fonts-texgyre
 ```
 
 macOS 推荐 MacTeX。Overleaf 选择 `PhdTemplate.tex` 为主文件、XeLaTeX 为编译器，并选择较新的 TeX Live。平台是否支持 `.latexmkrc` 输出目录可能影响下载入口，但不影响正文结构。

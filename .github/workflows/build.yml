@@ -13,7 +13,7 @@ jobs:
       - name: Install TeX Live
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends latexmk texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-bibtex-extra fonts-texgyre
+          sudo apt-get install -y --no-install-recommends latexmk texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-bibtex-extra texlive-fonts-recommended fonts-texgyre
       - name: Compile normal, review and portable versions
         run: |
           latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error PhdTemplate.tex
