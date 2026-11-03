@@ -35,13 +35,13 @@
   \IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
 \fi
 \newcommand{\thesisfandolfonts}{%
-  \setCJKmainfont{FandolSong-Regular}[BoldFont=FandolSong-Bold,ItalicFont=FandolKai-Regular]
-  \setCJKsansfont{FandolHei-Regular}[BoldFont=FandolHei-Bold]
-  \setCJKmonofont{FandolFang-Regular}
-  \setCJKfamilyfont{zhsong}{FandolSong-Regular}[BoldFont=FandolSong-Bold]
-  \setCJKfamilyfont{zhhei}{FandolHei-Regular}[BoldFont=FandolHei-Bold]
-  \setCJKfamilyfont{zhkai}{FandolKai-Regular}[AutoFakeBold=2.5]
-  \setCJKfamilyfont{zhfs}{FandolFang-Regular}}
+  \setCJKmainfont{FandolSong-Regular.otf}[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolKai-Regular.otf]
+  \setCJKsansfont{FandolHei-Regular.otf}[BoldFont=FandolHei-Bold.otf]
+  \setCJKmonofont{FandolFang-Regular.otf}
+  \setCJKfamilyfont{zhsong}{FandolSong-Regular.otf}[BoldFont=FandolSong-Bold.otf]
+  \setCJKfamilyfont{zhhei}{FandolHei-Regular.otf}[BoldFont=FandolHei-Bold.otf]
+  \setCJKfamilyfont{zhkai}{FandolKai-Regular.otf}[AutoFakeBold=2.5]
+  \setCJKfamilyfont{zhfs}{FandolFang-Regular.otf}}
 \ifthesisportable
   \thesisfandolfonts
 \else

@@ -15,3 +15,4 @@ WHUPhd-2026 首次公开版本。
 - 提供匿名送审模式及 Fandol 跨平台字体模式。
 - 增加 VS Code 配置、latexmk 配置、Git 忽略规则及 GitHub 构建工作流。
 - 显式安装 Linux 构建所需的推荐字体包，避免精简环境缺少 `pzdr` 字体而中止编译。
+- 按 `.otf` 文件名加载 Fandol 字体，兼容字体未注册到系统字体索引的 Linux 环境。
