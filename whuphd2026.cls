@@ -1,7 +1,7 @@
 % SPDX-License-Identifier: MIT
 % Community doctoral thesis template. Compile with XeLaTeX.
 \NeedsTeXFormat{LaTeX2e}[2022/06/01]
-\ProvidesClass{whuphd2026}[2026/11/03 v0.1.0 Community doctoral thesis template]
+\ProvidesClass{whuphd2026}[2026/11/03 v1.0.0 Community doctoral thesis template]
 \RequirePackage{iftex}
 \ifXeTeX\else
   \ClassError{whuphd2026}{XeLaTeX is required}{Select XeLaTeX or run latexmk -xelatex.}

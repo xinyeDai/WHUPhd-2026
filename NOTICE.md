@@ -8,4 +8,10 @@
 
 本仓库不分发宋体、黑体、楷体、Times New Roman 等商业字体文件。Windows 中可使用本机已安装的字体；跨平台模式采用 TeX 发行版提供的 Fandol 与 TeX Gyre Termes。字体替换可能改变换行与分页。
 
+示例 PDF 包含排版所需的字体子集，不作为可单独安装的字体分发。首次发布核对的 Windows 字体均允许可编辑文档嵌入（OS/2 `fsType=8`）；文档嵌入与独立字体再分发的区别见 [Microsoft 字体许可说明](https://learn.microsoft.com/en-us/typography/fonts/font-faq#document-embedding)。字体本身不适用本项目的 MIT 许可。
+
+示例 PDF 及预览图中的 A/B 占位图来自 Martin Scharrer 的 `mwe` 宏包（Copyright 2012–2018，LPPL 1.3 或更新版本），以未修改的示例图用于文档排版。上游来源及许可见 [CTAN mwe](https://ctan.org/pkg/mwe)。本仓库没有单独打包该宏包或原始占位图文件。
+
+本次核对的旧版 `WHUPhd.cls` 未见明确的再分发许可，不将该文件纳入本次发布，也不将本项目的 MIT 许可扩展到旧版模板。学校或学院提供的格式参考原件同样不随本仓库分发。
+
 默认封面校名使用文字。若自行添加官方校名或校徽资源，请确认使用与再分发条件，并保留资源来源及许可信息。声明和授权页是位置占位，使用者应从学校或学院取得现行正式文本。
